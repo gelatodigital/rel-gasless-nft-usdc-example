@@ -15,7 +15,7 @@ cd contracts
 npm install
 ```
 
-3. Edit `hardhat.config.ts` with private information
+3. Edit `hardhat.config.ts`
 
 4. Compile the contract
 ```
@@ -44,10 +44,7 @@ cd frontend
 npm install
 ```
 
-3. Fill in information
-```
--> src/config.ts
-```
+3. Edit `src/config.ts`
 
 4. Run the frontend
 ```
