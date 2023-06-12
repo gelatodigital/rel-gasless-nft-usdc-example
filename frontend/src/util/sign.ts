@@ -1,6 +1,6 @@
 import { ethers } from 'ethers';
 
-const sign = async (signer: ethers.JsonRpcSigner, token: ethers.Contract, value: bigint, spender: ethers.Contract, deadline: bigint, chainId: bigint): Promise<ethers.Signature | null> => {
+const sign = async (signer: ethers.JsonRpcSigner, token: ethers.Contract, value: bigint, spender: ethers.Contract, deadline: number, chainId: bigint): Promise<ethers.Signature | null> => {
   const salt = ethers.solidityPacked(['uint256'], [chainId]);
 
   const domain: ethers.TypedDataDomain = {

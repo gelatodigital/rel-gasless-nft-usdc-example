@@ -41,7 +41,7 @@ const App = () => {
         return setStatus({ state: State.failed, message: 'Insufficient balance' });
 
       const { chainId } = await provider.getNetwork();
-      const deadline = ethers.MaxUint256;
+      const deadline = Math.floor(Date.now() / 1000) + 60 * 5;
 
       const sig = await sign(signer, token!, amount, nft!, deadline, chainId);
 
@@ -130,7 +130,7 @@ const App = () => {
                 <Price amount={price} decimals={decimals} />
               </div>
               <div>
-                <span>Gas Fee</span>
+                <span>Max Gas Fee</span>
                 <Price amount={fee} decimals={decimals} />
               </div>
               <hr />
