@@ -5,12 +5,12 @@ const config: HardhatUserConfig = {
   solidity: "0.8.18",
   networks: {
     polygon: {
-      url: 'https://polygon-mainnet.g.alchemy.com/v2/YOUR KEY',
-      accounts: ['PK']
+      url: 'https://polygon-mainnet.g.alchemy.com/v2/<API KEY>',
+      accounts: ['<PRIVATE KEY>']
     }
   },
   etherscan: {
-    apiKey: 'YOUR KEY'
+    apiKey: '<API KEY>'
   }
 };
 
